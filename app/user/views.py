@@ -25,7 +25,11 @@ class ManageUserView(generics.RetrieveUpdateAPIView):
     authentication_classes = [authentication.TokenAuthentication]
     permission_classes = [permissions.IsAuthenticated]
 
-
+    # This view is typically used for retrieving (GET) or updating (PUT/PATCH) information about a single object. 
+    # In this case, the "object" is the authenticated user.
+    # Since the view is for managing the authenticated user, 
+    # it is necessary to retrieve the current user (from self.request.user)
+    # to ensure that the user can only interact with their own data.
     def get_object(self):
         """Retrive and return the authenticated user."""
         return self.request.user
