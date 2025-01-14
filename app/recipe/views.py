@@ -92,6 +92,8 @@ class RecipeViewSet(viewsets.ModelViewSet):
     @action(methods=['POST'], detail=True, url_path='upload_image')
     def upload_image(self, request, pk=None):
         """Upload an image to recipe."""
+        # The get_object method in Django REST Framework (DRF) is a utility method provided by the ViewSet and GenericAPIView classes.
+       #  It retrieves the specific object (typically a model instance) that the current view is supposed to act upon.
         recipe = self.get_object()
         # get_serializer it will indirectly run get_serializer_class
         # to get instance of the serializer class and it will return the
