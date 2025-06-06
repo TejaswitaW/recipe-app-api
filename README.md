@@ -28,3 +28,7 @@ A simple Booking API for a fictional fitness studio built with **Python**, **Dja
 ```bash
 git clone https://github.com/TejaswitaW/fitness_studio.git
 cd fitness_studio
+
+### 🧱 Set Up Virtual Environment
+```bash
+python -m venv venv
