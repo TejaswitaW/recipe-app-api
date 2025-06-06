@@ -33,3 +33,4 @@ cd fitness_studio
 ### 🧱 Set Up Virtual Environment
 ```bash
 python -m venv venv
+```
